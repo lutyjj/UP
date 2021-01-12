@@ -12,6 +12,8 @@ namespace lab3
     {
         BluetoothDeviceInfo[] devices;
         BluetoothDeviceInfo connectedDevice;
+        BluetoothClient client = new BluetoothClient();
+        BluetoothRadio radio = BluetoothRadio.PrimaryRadio;
 
         public MainForm()
         {
@@ -24,6 +26,7 @@ namespace lab3
         {
             btnPair.Enabled = false;
             btnSend.Enabled = false;
+            lblAdapter.Text = "Local adapter: " + radio.LocalAddress.ToString();
         }
 
         private async void btnScan_Click(object sender, EventArgs e)
@@ -43,7 +46,6 @@ namespace lab3
 
         private void Scan()
         {
-            BluetoothClient client = new BluetoothClient();
             devices = client.DiscoverDevicesInRange();
         }
 
@@ -69,7 +71,7 @@ namespace lab3
         {
             if (connectedDevice != null)
             {
-                if (!connectedDevice.Authenticated && !BluetoothSecurity.PairRequest(connectedDevice.DeviceAddress, "0000"))
+                if (!connectedDevice.Authenticated && !BluetoothSecurity.PairRequest(connectedDevice.DeviceAddress, "000000"))
                 {
                     MessageBox.Show("Request failed");
                     UIChangeStatus(false);

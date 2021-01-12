@@ -39,6 +39,7 @@ namespace lab3
             this.label1 = new System.Windows.Forms.Label();
             this.progressBarSend = new System.Windows.Forms.ProgressBar();
             this.btnScan = new System.Windows.Forms.Button();
+            this.lblAdapter = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cbxDevices
@@ -132,11 +133,21 @@ namespace lab3
             this.btnScan.UseVisualStyleBackColor = true;
             this.btnScan.Click += new System.EventHandler(this.btnScan_Click);
             // 
+            // lblAdapter
+            // 
+            this.lblAdapter.AutoSize = true;
+            this.lblAdapter.Location = new System.Drawing.Point(237, 91);
+            this.lblAdapter.Name = "lblAdapter";
+            this.lblAdapter.Size = new System.Drawing.Size(46, 17);
+            this.lblAdapter.TabIndex = 10;
+            this.lblAdapter.Text = "label2";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(454, 450);
+            this.Controls.Add(this.lblAdapter);
             this.Controls.Add(this.btnScan);
             this.Controls.Add(this.progressBarSend);
             this.Controls.Add(this.label1);
@@ -166,6 +177,7 @@ namespace lab3
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ProgressBar progressBarSend;
         private System.Windows.Forms.Button btnScan;
+        private System.Windows.Forms.Label lblAdapter;
     }
 }
 
