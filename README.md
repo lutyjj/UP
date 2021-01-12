@@ -4,3 +4,4 @@ Spis zadań:
 * Laboratorium 1: Karta muzyczna (mikrofon)
 * Laboratorium 2-3: Kamera
 * Laboratorium 4: Bluetooth
+* Laboratorium 5: IMU na telefonie
