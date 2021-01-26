@@ -5,3 +5,4 @@ Spis zadań:
 * Laboratorium 2-3: Kamera
 * Laboratorium 4: Bluetooth
 * Laboratorium 5: IMU na telefonie
+* Laboratorium 6: Kody kreskowe i QR
